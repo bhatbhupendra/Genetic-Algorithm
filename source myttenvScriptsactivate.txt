@@ -1,0 +1,16 @@
+source myttenv/Scripts/activate
+django-admin startproject ttGA
+cd ttGA
+python manage.py runserver
+python manage.py migrate
+winpty python manage.py createsuperuser
+
+bhat
+bhupendra420110bhat@gmail.com
+bhat123
+
+python manage.py startapp ttGenApp
+
+
+
+

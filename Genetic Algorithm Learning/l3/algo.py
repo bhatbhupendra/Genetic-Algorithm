@@ -13,6 +13,12 @@ teachers={
     "ELET":["ELEX",1,1,0,0],
 }
 
+
+#Fitness section
+def fitness(chromosome):
+    print(chromosome)
+    return 1
+
 def generate_population(population_size):
     population = []
     chromosome =[]
@@ -30,5 +36,11 @@ def generate_population(population_size):
 population_size = 1
 population = generate_population(population_size)
 generations = 2
-print(population)
+print('The Generated Population',population)
+
+
+for _ in range(generations):
+    # Select parents
+    parents = random.choices(population, k=2, weights=[1/fitness(chromosome) for chromosome in population])
+    print("Selected Parents",parents)
 
